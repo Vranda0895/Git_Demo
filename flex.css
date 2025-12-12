@@ -1,0 +1,23 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+}
+.container{
+    display: flex;
+    gap: 50px;
+    flex-direction: column-reverse;
+    background-color: blueviolet;
+    padding: 20px;
+    border: 0cm;
+}
+.box{
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+.box1{background-color: aquamarine;}
+.box2{background-color: rgb(61, 61, 161);}
+.box3{background-color: rgb(255, 127, 133);}
+.box4{background-color: rgb(127, 255, 168);}
+.box5{background-color: rgb(225, 212, 67);}
