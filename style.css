@@ -1,64 +1,74 @@
-* {
+/* ===== PAGE RESET ===== */
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f4f7;
 }
-body{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(199, 106, 106);
+
+/* ===== HEADER (BLOCK) ===== */
+header {
+    display: block;
+    background-color: #1f3a5f;
     color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ===== NAVIGATION BAR ===== */
+nav {
+    background-color: #34495e;
+    overflow: hidden;
+}
+
+/* ===== FLOAT MENU ITEMS ===== */
+nav a {
+    float: left;
+    display: inline-block;
     padding: 15px 20px;
-}
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    
-}
-
-.nav-links {
-    display: flex;
-list-style: none;
-}
-
-.nav-links li {
-    margin: 0 15px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-}
-
-.actions a {
-    margin-left: 15px;
     color: white;
     text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
+    background-color: #16a085;
+}
+
+/* ===== CLEAR FLOAT ===== */
+.clear {
+    clear: both;
+}
+
+/* ===== CONTENT AREA ===== */
+.content {
+    padding: 20px;
+}
+
+/* ===== INLINE TEXT ===== */
+.highlight {
+    display: inline;
+    color: #e74c3c;
     font-weight: bold;
 }
 
-@media (max-width:768px) {
-    .nav-links {
-        display: none;
-    }
-    .actions {
-        font-size: 0,9rem;
-    }
+/* ===== INLINE-BLOCK BOXES ===== */
+.box {
+    display: inline-block;
+    width: 140px;
+    height: 90px;
+    margin: 10px;
+    background-color: #2980b9;
+    color: white;
+    text-align: center;
+    line-height: 90px;
+    border-radius: 6px;
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
-    .nav-links a {
-        font-size: 0.9rem;
-    }
-}
-
-@media (min-width: 1025px) {
-    .nav-links a {
-        font-size: 1rem;
-}
+/* ===== FOOTER ===== */
+footer {
+    background-color: #1f3a5f;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
 }
