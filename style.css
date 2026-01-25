@@ -1,59 +1,108 @@
-/* ===== BASIC RESET ===== */
+/* ===== RESET ===== */
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #eef2f5;
+    background-color: #f4f6f8;
 }
 
 /* ===== HEADER ===== */
 header {
     text-align: center;
-    background-color: #2c3e50;
+    background-color: #1f3a5f;
     color: white;
+    padding: 25px;
+}
+
+/* ===== INTRO ===== */
+.intro {
     padding: 20px;
-}
-
-/* ===== FLEX CONTAINER ===== */
-.card-container {
-    display: flex;
-    justify-content: center;   /* center horizontally */
-    align-items: center;       /* center vertically */
-    min-height: 70vh;
-}
-
-/* ===== STUDENT CARD ===== */
-.student-card {
-    display: flex;
-    flex-direction: row;       /* image and info side-by-side */
-    align-items: center;
     background-color: white;
-    width: 420px;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+/* ===== GRID CONTAINER ===== */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
     padding: 20px;
+}
+
+/* ===== PRODUCT CARD ===== */
+.product-card {
+    background-color: white;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* ===== IMAGE ===== */
-.student-card img {
-    border-radius: 50%;
-    margin-right: 20px;
+.product-card img {
+    width: 100%;
+    border-radius: 6px;
 }
 
-/* ===== STUDENT INFO ===== */
-.student-info h2 {
-    margin: 0;
-    color: #2c3e50;
+.product-card h3 {
+    margin: 10px 0;
 }
 
-.student-info p {
-    margin: 6px 0;
+.product-card p {
     color: #555;
+}
+
+.price {
+    display: block;
+    font-weight: bold;
+    color: #27ae60;
+    margin: 8px 0;
+}
+
+.product-card button {
+    background-color: #1f3a5f;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-card button:hover {
+    background-color: #16a085;
+}
+
+/* ===== THEORY ===== */
+.theory {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.theory ul {
+    margin-top: 10px;
 }
 
 /* ===== FOOTER ===== */
 footer {
     text-align: center;
-    background-color: #2c3e50;
+    background-color: #1f3a5f;
     color: white;
-    padding: 10px;
+    padding: 12px;
+}
+
+/* ===== BREAKPOINTS ===== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
 }
