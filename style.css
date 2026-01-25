@@ -1,74 +1,59 @@
-/* ===== PAGE RESET ===== */
+/* ===== BASIC RESET ===== */
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f2f4f7;
+    background-color: #eef2f5;
 }
 
-/* ===== HEADER (BLOCK) ===== */
+/* ===== HEADER ===== */
 header {
-    display: block;
-    background-color: #1f3a5f;
-    color: white;
     text-align: center;
+    background-color: #2c3e50;
+    color: white;
     padding: 20px;
 }
 
-/* ===== NAVIGATION BAR ===== */
-nav {
-    background-color: #34495e;
-    overflow: hidden;
+/* ===== FLEX CONTAINER ===== */
+.card-container {
+    display: flex;
+    justify-content: center;   /* center horizontally */
+    align-items: center;       /* center vertically */
+    min-height: 70vh;
 }
 
-/* ===== FLOAT MENU ITEMS ===== */
-nav a {
-    float: left;
-    display: inline-block;
-    padding: 15px 20px;
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-nav a:hover {
-    background-color: #16a085;
-}
-
-/* ===== CLEAR FLOAT ===== */
-.clear {
-    clear: both;
-}
-
-/* ===== CONTENT AREA ===== */
-.content {
+/* ===== STUDENT CARD ===== */
+.student-card {
+    display: flex;
+    flex-direction: row;       /* image and info side-by-side */
+    align-items: center;
+    background-color: white;
+    width: 420px;
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* ===== INLINE TEXT ===== */
-.highlight {
-    display: inline;
-    color: #e74c3c;
-    font-weight: bold;
+/* ===== IMAGE ===== */
+.student-card img {
+    border-radius: 50%;
+    margin-right: 20px;
 }
 
-/* ===== INLINE-BLOCK BOXES ===== */
-.box {
-    display: inline-block;
-    width: 140px;
-    height: 90px;
-    margin: 10px;
-    background-color: #2980b9;
-    color: white;
-    text-align: center;
-    line-height: 90px;
-    border-radius: 6px;
+/* ===== STUDENT INFO ===== */
+.student-info h2 {
+    margin: 0;
+    color: #2c3e50;
+}
+
+.student-info p {
+    margin: 6px 0;
+    color: #555;
 }
 
 /* ===== FOOTER ===== */
 footer {
-    background-color: #1f3a5f;
-    color: white;
     text-align: center;
+    background-color: #2c3e50;
+    color: white;
     padding: 10px;
-    margin-top: 20px;
 }
