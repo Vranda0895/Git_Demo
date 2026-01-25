@@ -7,7 +7,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f5f6fa;
+    background-color: #eaeded;
 }
 
 /* ===== NAVBAR ===== */
@@ -15,110 +15,171 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1e272e;
-    padding: 15px 5%;
+    background-color: #131921;
+    padding: 12px 5%;
     color: white;
 }
 
-/* ===== LOGO ===== */
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: bold;
+    color: #ff9900;
 }
 
-/* ===== NAV LINKS ===== */
-.nav-links {
+/* ===== SEARCH BAR ===== */
+.search-bar {
     display: flex;
-    gap: 20px;
+    width: 40%;
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-    padding: 6px 10px;
+.search-bar input {
+    flex: 1;
+    padding: 8px;
+    border: none;
 }
 
-.nav-links a:hover {
-    background-color: #485460;
-    border-radius: 4px;
-}
-
-/* ===== CART ===== */
-.cart {
-    background-color: #ff793f;
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 0.9rem;
+.search-bar button {
+    padding: 8px 15px;
+    background-color: #febd69;
+    border: none;
     cursor: pointer;
 }
 
-/* ===== HERO SECTION ===== */
-.hero {
-    text-align: center;
-    padding: 80px 20px;
-    background: linear-gradient(to right, #1e272e, #485460);
+.search-bar button:hover {
+    background-color: #f3a847;
+}
+
+/* ===== NAV ACTIONS ===== */
+.nav-actions span {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.cart {
+    font-weight: bold;
+}
+
+/* ===== CATEGORY BAR ===== */
+.category-bar {
+    background-color: #232f3e;
+    padding: 10px 5%;
+}
+
+.category-bar a {
     color: white;
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.category-bar a:hover {
+    text-decoration: underline;
+}
+
+/* ===== HERO ===== */
+.hero {
+    background: linear-gradient(to right, #232f3e, #37475a);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
 }
 
 .hero h1 {
     font-size: 2.5rem;
-    margin-bottom: 15px;
 }
 
 .hero p {
-    font-size: 1.1rem;
-    margin-bottom: 25px;
+    margin: 10px 0 20px;
 }
 
 .hero button {
-    background-color: #ff793f;
-    border: none;
     padding: 12px 25px;
+    background-color: #ff9900;
+    border: none;
     font-size: 1rem;
-    border-radius: 5px;
     cursor: pointer;
-    color: white;
 }
 
 .hero button:hover {
-    background-color: #ff5e1a;
+    background-color: #e68a00;
+}
+
+/* ===== PRODUCTS GRID ===== */
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 30px 5%;
+}
+
+.product-card {
+    background-color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.product-card img {
+    width: 100%;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.price {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #b12704;
+}
+
+.product-card button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #ffd814;
+    cursor: pointer;
+}
+
+.product-card button:hover {
+    background-color: #f7ca00;
 }
 
 /* ===== FOOTER ===== */
 footer {
-    text-align: center;
-    background-color: #1e272e;
+    background-color: #131921;
     color: white;
-    padding: 12px;
+    text-align: center;
+    padding: 15px;
 }
 
-/* ===== MEDIA QUERIES ===== */
-
-/* Tablet */
-@media (max-width: 768px) {
-    .nav-links {
-        gap: 12px;
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .hero h1 {
-        font-size: 2rem;
+    .search-bar {
+        width: 60%;
     }
 }
 
-/* Mobile */
 @media (max-width: 600px) {
     .navbar {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
     }
 
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
+    .products {
+        grid-template-columns: 1fr;
     }
 
-    .hero h1 {
-        font-size: 1.8rem;
+    .search-bar {
+        width: 100%;
     }
 }
